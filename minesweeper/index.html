@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<hmtl lang="pt">
+<head>
+	<title>Minesweeper</title>
+	<meta charset="utf-8">
+
+	
+	<link rel="stylesheet" media="screen" type="text/css" href="css/styles.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,700' rel='stylesheet' type='text/css'>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/minesweeper.js"></script>
+</head>
+
+<body>
+	<audio controls autoplay loop>
+		<source src="http://www.flashkit.com/imagesvr_ce/flashkit/loops/Ambient/Ambient/Forever_-AMKstudi-10568/Forever_-AMKstudi-10568_hifi.mp3" type"audio/ogg" loop>
+		<source src="http://www.flashkit.com/imagesvr_ce/flashkit/loops/Ambient/Ambient/Forever_-AMKstudi-10568/Forever_-AMKstudi-10568_hifi.mp3" type="audio/mpeg" loop>
+	</audio>
+	<a href=""><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+	</a>
+
+	<div class="container">
+		<header class="row">
+			<div class="sixcol">
+			<h1>Minesweeper</h1>
+			</div>
+			<div class="sixcol last">
+				
+			</div>
+		</header>
+		<section class="row">
+			<div class="eightcol">
+				<canvas id="board" width="600" height="400" oncontextmenu="return false;">
+					<p>Unfortunately, your browser does not seem to support the canvas element.</p>
+				</canvas>
+			
+				<noscript>
+					<p>Unfortunately, your javascript is disabled. You will need to enable it in order to play the game.</p>
+				</noscript>
+			</div>
+			<div class="fourcol last">
+				<div class="startscreen">
+					<h1>Começar Jogo :)</h1>
+					<p>Escolhe a dificuldade para comçares!</p>
+					<button id="easybtn">Fácil</button>
+					<button id="mediumbtn">Médio</button>
+					<button id="insanebtn">Dificil</button>
+				
+					
+					<h1>Jogos que ganhastes:</h1>
+					<table id="scoreboard">
+						<tr>
+							<th>Name</th>
+							<th>Mines</th>
+							<th>Seconds</th>
+						</tr>
+					</table>
+					
+				</div>
+				
+				<div class="gamescreen">
+					<h1 id="status">Começar Jogo :)</h1>
+					<p id="msg">Clica no quadrado para começar jogo!</p>
+					<button id="reset">Recomeçar</button>
+					<button id="switchscreens">Mudar dificuldade</button>
+					<br>
+					<p><span id="time">0</span> segundos</p>
+					<span id="mines"></span>
+					<span id="flags"></span>
+				</div>
+			</div>
+		</section>
+		<footer class="row">
+			<div class="threecol">
+			</div>
+			<div class="fourcol">
+			<a href="http://www.w3.org/html/logo/">
+					<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-semantics-storage.png" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage">
+				</a>
+			</div>
+			<div class="fivecol last">
+			
+				<b>As regras do Minesweeper são simples:</b>
+				<p>Se destapar uma mina, o jogo termina.</p>
+				Se destapar um quadrado vazio, tem a hipótese de continuar a jogar.
+				<p>Se destapar um número, este indica o número de minas que permanecem escondidas nos oito quadrados circundantes, informação esta que pode utilizar para deduzir os quadrados em que é seguro clicar à volta.</p>
+			<b>Sugestões e truques:</b>
+
+				<p><ins>Assinalar as minas:</ins></p> -Se suspeitar que um quadrado em particular esconde uma mina, clique no mesmo com o botão direito do rato. Desta forma, coloca uma bandeira no quadrado.
+				<p><ins>Analisar os padrões:</ins></p> -Se três quadrados de uma fila apresentarem os números 2-3-2, isto significa que é muito provável que existam três minas alinhadas ao lado dessa linha. 
+				<p><ins>Explorar o inexplorado:</ins></p> -Não sabe onde clicar a seguir? Experimente desbravar território inexplorado. Terá maiores probabilidades de sucesso se clicar em zonas com quadrados não marcados do que numa área onde suspeita existirem minas.
+
+				<p class="desc">
+				</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
